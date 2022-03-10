@@ -1,0 +1,14 @@
+version: 0.2
+
+phases:
+ build:
+  commands:
+    - echo Entered the build phase...
+    - mvn clean package
+ postbuild:
+  commands:
+    - echo Build completed successfully
+artifacts:
+ files:
+  - target/bankmvc.jar
+ dicard-paths: yes
